@@ -1,0 +1,48 @@
+.divSelect {
+  display: flex;
+  position: relative;
+}
+
+.select {
+  min-width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  appearance: none;
+  outline: none;
+  padding-left: 20px;
+  border: 1px solid #0073ff;
+  color: #0073ff;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.select:hover{
+  border: 1px solid #0066ff;
+  transition: 0.1s;
+}
+
+.select:focus {
+  outline: 1px solid #0073ff
+} 
+
+.divSelect::after {
+  content: "\25BC";
+  position: absolute;
+  right: 20px;
+  font-size: 15px;
+  align-self: center;
+  pointer-events: none;
+  color: #0073ff;
+}
+
+.divIcon {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}

@@ -1,0 +1,44 @@
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  min-width: 200px;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid #0073ff;
+  border-radius: 8px;
+  outline: none;
+  color: #343A40;
+}
+
+.input:hover{
+  border: 1px solid #0066ff;
+  transition: 0.1s;
+}
+
+.input:focus {
+  outline: 1px solid #0073ff
+} 
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  color: #0073ff;
+  transform: translateY(-50%);
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.labelInput {
+  color:#343A40;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.label.elevated {
+  top: 0px;
+  font-size: 12px;
+  background-color: white;
+  padding-inline: 5px;
+}

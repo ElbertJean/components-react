@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+}
+
+.input {
+  min-width: 150px;
+  max-width: 200px;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #9E9E9E;
+  border-radius: 8px;
+  appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #9E9E9E;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.input:hover {
+  border: 1px solid #0066ff; 
+}
+
+.outline:focus {
+  outline: 1px solid #0073ff;
+}
+
+.input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url('../../../assets/CalendarBlank.svg');
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.input.dateSelected {
+  color: #343A40
+}
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: top 0.3s, font-size 0.3s;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.label.elevated {
+  top: 0px;
+  font-size: 12px;
+  background-color: white;
+  padding-inline: 5px;
+}
+
+.focused {
+  color: #0073ff;
+}
