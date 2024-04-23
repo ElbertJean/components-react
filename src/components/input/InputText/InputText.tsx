@@ -13,6 +13,7 @@ const InputLabel = (props: InputProps) => {
 
   const [valor, setValor] = useState('');
   const [placeholderElevado, setPlaceholderElevado] = useState(false);
+  const inputId = `input-${label}`;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -33,6 +34,7 @@ const InputLabel = (props: InputProps) => {
   return (
     <div className={styles.inputContainer} >
       <input
+        id={inputId}
         className={styles.input}
         type="text"
         value={valor}
@@ -41,7 +43,7 @@ const InputLabel = (props: InputProps) => {
         onBlur={handleBlur}
         {...rest}
       />
-      <label className={`${styles.label} ${placeholderElevado || valor !== '' ? styles.elevated : styles.labelInput}`}>
+      <label className={`${styles.label} ${placeholderElevado || valor !== '' ? styles.elevated : styles.labelInput}`} htmlFor={inputId}>
         {label}
       </label>
     </div>
